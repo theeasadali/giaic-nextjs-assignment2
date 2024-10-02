@@ -1,0 +1,1 @@
+# theeasadali-nextjs-assignment2
