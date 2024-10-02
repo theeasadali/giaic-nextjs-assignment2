@@ -2,26 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.section-heading {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: rgb(249, 115, 22);
+}
+.container {
+  margin: 0 auto;
+  padding-block: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 83.333%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  transition-property: all;    
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);    
+  transition-duration: 300ms;
+  --tailwind-opacity: 1;
+  background-color: rgb(185, 28, 28);
+  border-radius: 1rem;
+  color: #fff7ed;
+  padding: 5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.content:hover{
+  transform: translateY(-1rem);
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.name {
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 700;
+  color: white;
+  padding-block: 0.25rem;
+}
+
+.role {
+  letter-spacing: 0.1em;  
+}
+
+.link-btn {
+  background-color: rgb(251, 146, 60);
+  max-width: max-content;
+  padding: 0.5rem 1.25rem;
+  margin: 1.25rem 0;
+  border-radius: 0.5rem;
+  transition-property: all;    
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);    
+  transition-duration: 150ms;
+}
+
+.link-btn:hover {
+  background-color: rgb(249, 115, 22);
+}
+
+.profile-img {
+  border-radius: 1rem;
+  border: 3px solid rgb(185,28,28);
+  transition-property: all;    
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);    
+  transition-duration: 300ms;
+}
+
+.profile-img:hover {
+  transform: translateY(-1rem);
 }
